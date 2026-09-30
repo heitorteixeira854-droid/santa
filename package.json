@@ -1,0 +1,13 @@
+{
+  "name": "roblox-allowlist-netlify",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "register": "node --env-file=.env register-commands.mjs",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.2"
+  }
+}
