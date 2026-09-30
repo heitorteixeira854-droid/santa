@@ -13,6 +13,22 @@ const res = await fetch(
         default_member_permissions: '8', // só Administrador
         dm_permission: false,
       },
+      {
+        name: 'removerallow',
+        description: 'Remove a allowlist de uma pessoa (por @usuário ou por ID)',
+        default_member_permissions: '8',
+        dm_permission: false,
+        options: [
+          { type: 6, name: 'usuario', description: 'Membro do Discord', required: false },
+          { type: 4, name: 'id', description: 'ID da allowlist (número)', required: false, min_value: 1 },
+        ],
+      },
+      {
+        name: 'resetarids',
+        description: 'Apaga TODOS os IDs e allowlists (pede confirmação)',
+        default_member_permissions: '8',
+        dm_permission: false,
+      },
     ]),
   },
 );
