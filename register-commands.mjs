@@ -24,6 +24,17 @@ const res = await fetch(
         ],
       },
       {
+        name: 'alterarid',
+        description: 'Altera o ID de uma pessoa (banco de dados + apelido)',
+        default_member_permissions: '8',
+        dm_permission: false,
+        options: [
+          { type: 4, name: 'novo_id', description: 'Novo ID (número)', required: true, min_value: 1 },
+          { type: 6, name: 'usuario', description: 'Membro do Discord', required: false },
+          { type: 4, name: 'id_atual', description: 'ID atual da pessoa (se não marcar o @)', required: false, min_value: 1 },
+        ],
+      },
+      {
         name: 'resetarids',
         description: 'Apaga TODOS os IDs e allowlists (pede confirmação)',
         default_member_permissions: '8',
