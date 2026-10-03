@@ -35,6 +35,22 @@ const res = await fetch(
         ],
       },
       {
+        name: 'allowlist',
+        description: 'Liga ou desliga a exigência de allowlist para entrar no jogo',
+        default_member_permissions: '8',
+        dm_permission: false,
+        options: [
+          {
+            type: 3, name: 'estado', description: 'O que fazer', required: true,
+            choices: [
+              { name: 'Ligar (allowlist obrigatória)', value: 'ligar' },
+              { name: 'Desligar (servidor aberto)', value: 'desligar' },
+              { name: 'Ver status atual', value: 'status' },
+            ],
+          },
+        ],
+      },
+      {
         name: 'resetarids',
         description: 'Apaga TODOS os IDs e allowlists (pede confirmação)',
         default_member_permissions: '8',
